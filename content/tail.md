@@ -102,5 +102,5 @@ Notes:
 
 ### SEE ALSO
 
-* [cloudtail](index.md)	 - cloudtail displays or tail logs from Google Cloud Logging
+* [cloudtail](/docs/index.md)	 - cloudtail displays or tail logs from Google Cloud Logging
 

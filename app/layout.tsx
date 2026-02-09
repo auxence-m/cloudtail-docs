@@ -42,14 +42,17 @@ export default async function RootLayout({children}: Readonly<{ children: React.
     const pageMap = await getPageMap()
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-        <Head/>
+        <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </Head>
         <body>
             <Layout
                 navbar={navbar}
                 footer={footer}
-                docsRepositoryBase="https://github.com/auxence-m/cloudtail-docs"
+                docsRepositoryBase="https://github.com/auxence-m/cloudtail-docs/tree/main/app/docs"
                 sidebar={{ defaultMenuCollapseLevel: 1 }}
-                pageMap={pageMap}>
+                pageMap={pageMap}
+            >
                 {children}
             </Layout>
         </body>

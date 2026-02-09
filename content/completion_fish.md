@@ -30,5 +30,5 @@ cloudtail completion fish [flags]
 
 ### SEE ALSO
 
-* [cloudtail completion](completion.md)	 - Generate the autocompletion script for the specified shell
+* [cloudtail completion](/docs/completion.md)	 - Generate the autocompletion script for the specified shell
 
