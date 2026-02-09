@@ -12,78 +12,76 @@ cloudtail tail [projectID] [flags]
 
 ### Examples
 
-```
-
 The following examples demonstrate common usage patterns for tail.
 
-# Stream all logs in real time
-cloudtail tail projectID --follow
+####  Stream all logs in real time
+    cloudtail tail projectID --follow
 
-# Stream logs from a specific resource type
-cloudtail tail projectID --resource-type=gce_instance --follow
+####  Stream logs from a specific resource type
+    cloudtail tail projectID --resource-type=gce_instance --follow
 
-# Stream only ERROR severity logs
-cloudtail tail projectID --severity=ERROR --follow
+#### Stream only ERROR severity logs
+    cloudtail tail projectID --severity=ERROR --follow
 
-# Display the most recent 100 log entries
-cloudtail tail projectID --limit=100
+#### Display the most recent 100 log entries
+    cloudtail tail projectID --limit=100
 
-# Display logs from the last 30 minutes
-cloudtail tail projectID --since=30m
+#### Display logs from the last 30 minutes
+    cloudtail tail projectID --since=30m
 
-# Display logs from the last hour and continue streaming
-cloudtail tail projectID -since=1h --follow
+#### Display logs from the last hour and continue streaming
+    cloudtail tail projectID -since=1h --follow
 
-# Display logs newer than a specific point in time
-cloudtail tail projectID --since-time=2026-02-12T12:30:00Z
+#### Display logs newer than a specific point in time
+    cloudtail tail projectID --since-time=2026-02-12T12:30:00Z
 
-# Filter logs by log name and resource type
-cloudtail tail projectID \
-	--log-name=projects/projectID/logs/cloudbuild \
-	--resource-type=k8s_container
+#### Filter logs by log name and resource type
+    cloudtail tail projectID \
+        --log-name=projects/projectID/logs/cloudbuild \
+        --resource-type=k8s_container
 
-# Combine severity and time-based filtering
-cloudtail tail projectID --severity=WARNING --since=1h
+#### Combine severity and time-based filtering
+    cloudtail tail projectID --severity=WARNING --since=1h
 
-# Use an advanced filter expression for complex queries
-cloudtail tail projectID \
-	--filter='severity>="ERROR" AND timestamp>="2026-01-01T00:00:00Z" AND timestamp<="2023-01-31T12:00:00Z"'
+#### Use an advanced filter expression for complex queries
+    cloudtail tail projectID \
+        --filter='severity>="ERROR" AND timestamp>="2026-01-01T00:00:00Z" AND timestamp<="2023-01-31T12:00:00Z"'
 
-# Combine advanced filtering with a result limit
-cloudtail tail projectID \
-	--filter='severity>="ERROR" AND timestamp>="2026-01-01T00:00:00Z" AND timestamp<="2023-01-31T12:00:00Z"' \
-	--limit=100
+#### Combine advanced filtering with a result limit
+    cloudtail tail projectID \
+        --filter='severity>="ERROR" AND timestamp>="2026-01-01T00:00:00Z" AND timestamp<="2023-01-31T12:00:00Z"' \
+        --limit=100
 
-# Stream logs using an advanced filter expression
-cloudtail tail projectID --filter='severity>="CRITICAL"' --follow
+#### Stream logs using an advanced filter expression
+    cloudtail tail projectID --filter='severity>="CRITICAL"' --follow
 
-# Write log output to a file instead of stdout
-cloudtail tail projectID --severity=INFO --output=logs.txt
+#### Write log output to a file instead of stdout
+    cloudtail tail projectID --severity=INFO --output=logs.txt
 
-# Stream logs and write them to a file
-cloudtail tail projectID --follow --output=logs.txt
+#### Stream logs and write them to a file
+    cloudtail tail projectID --follow --output=logs.txt
 
-# Combine multiple filters for a focused query
-cloudtail tail projectID \
-	--log-name=projects/projectID/logs/cloudbuild \
-	--resource-type=k8s_container \
-	--severity=ERROR \
-	--since=15m
+#### Combine multiple filters for a focused query
+    cloudtail tail projectID \
+        --log-name=projects/projectID/logs/cloudbuild \
+        --resource-type=k8s_container \
+        --severity=ERROR \
+        --since=15m
 
-# Retrieve recent logs using a fixed timestamp and save them
-cloudtail tail projectID \
-	--since-time=2026-01-13T12:30:00Z \
-	--limit=200 \
-	--output=incident.log
+#### Retrieve recent logs using a fixed timestamp and save them
+    cloudtail tail projectID \
+        --since-time=2026-01-13T12:30:00Z \
+        --limit=200 \
+        --output=incident.log
 
-Notes:
+### Notes
   - To include historical logs, use --since or --since-time. 
     A timestamp in --filter alone does not include past entries.
   - --follow streams logs in real-time. Without --since or --since-time, 
     only new entries from the time of execution are shown.
   - --limit applies only to the initial historical fetch. Streaming ignores it.
 
-```
+
 
 ### Options
 
