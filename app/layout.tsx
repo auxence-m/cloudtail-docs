@@ -20,15 +20,29 @@ export const metadata: Metadata = {
         default: 'Cloudtail',
         template: `%s | Cloudtail`
     },
+    keywords: [
+        'Cloud',
+        'Logging',
+        'CLI',
+        'Nextra',
+        'Next.js',
+        'React',
+        'Typescript',
+    ],
     description: 'Display or tail logs from Google Cloud Logging',
     generator: 'Next.js',
     applicationName: 'Cloudtail',
     openGraph: {
+        // https://github.com/vercel/next.js/discussions/50189#discussioncomment-10826632
         url: './',
         siteName: 'Cloudtail',
         locale: 'en_US',
         type: 'website'
-    }
+    },
+    alternates: {
+        // https://github.com/vercel/next.js/discussions/50189#discussioncomment-10826632
+        canonical: './',
+    },
 };
 
 const navbar = (

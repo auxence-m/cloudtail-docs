@@ -1,3 +1,7 @@
+---
+title: completion command
+---
+
 ## cloudtail completion
 
 Generate the autocompletion script for the specified shell

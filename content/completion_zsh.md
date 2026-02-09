@@ -1,3 +1,7 @@
+---
+title: zsh completion
+---
+
 ## cloudtail completion zsh
 
 Generate the autocompletion script for zsh

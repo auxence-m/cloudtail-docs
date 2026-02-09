@@ -1,3 +1,7 @@
+---
+title: bash completion
+---
+
 ## cloudtail completion bash
 
 Generate the autocompletion script for bash

@@ -1,3 +1,7 @@
+---
+title: fish completion
+---
+
 ## cloudtail completion fish
 
 Generate the autocompletion script for fish
