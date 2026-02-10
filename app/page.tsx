@@ -15,10 +15,17 @@ export default function HomePage() {
 
                 <div className="mt-8">
                     <Link
-                        href="/docs"
-                        className="inline-flex items-center rounded-md bg-black px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 transition"
+                        href="/installation"
+                        className="inline-flex items-center rounded-md bg-black mx-2 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 transition"
                     >
-                        View Documentation →
+                        Installation →
+                    </Link>
+
+                    <Link
+                        href="/docs"
+                        className="inline-flex items-center rounded-md bg-black mx-2 px-4 py-2 text-sm font-medium text-white hover:bg-gray-800 transition"
+                    >
+                        Documentation →
                     </Link>
                 </div>
             </div>

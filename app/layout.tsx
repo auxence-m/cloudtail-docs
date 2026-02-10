@@ -76,7 +76,7 @@ export default async function RootLayout({children}: Readonly<{ children: React.
                 footer={footer}
                 editLink="Edit this page on GitHub"
                 docsRepositoryBase="https://github.com/auxence-m/cloudtail-docs/tree/main/app/docs"
-                sidebar={{ defaultMenuCollapseLevel: 1 }}
+                sidebar={{ defaultMenuCollapseLevel: 2 }}
                 pageMap={pageMap}
             >
                 {children}

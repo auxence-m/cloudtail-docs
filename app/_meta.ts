@@ -1,7 +1,13 @@
-// eslint-disable-next-line import/no-anonymous-default-export
-export default {
+import type {MetaRecord} from "nextra";
+
+const meta: MetaRecord = {
     index: {
         display: 'hidden',
+    },
+
+    installation: {
+        title: "Installation",
+        type: "page",
     },
 
     docs: {
@@ -15,6 +21,6 @@ export default {
         href: 'https://github.com/auxence-m',
     },
 
-
-
 }
+
+export default meta;

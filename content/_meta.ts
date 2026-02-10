@@ -1,6 +1,5 @@
 import type {MetaRecord} from "nextra";
 
-
 const meta: MetaRecord = {
     index: {
         title: "Overview"
@@ -32,7 +31,7 @@ const meta: MetaRecord = {
 
     completion_zsh: {
         title: "zsh completion"
-    }
+    },
 
 }
 
