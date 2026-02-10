@@ -5,6 +5,8 @@ import { getPageMap } from 'nextra/page-map'
 import "./globals.css";
 import React from "react";
 
+import { Analytics } from "@vercel/analytics/next"
+
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -30,6 +32,7 @@ export const metadata: Metadata = {
         'Typescript',
     ],
     description: 'Display or tail logs from Google Cloud Logging',
+    metadataBase: new URL('https://cloudtail-docs.vercel.app/'),
     generator: 'Next.js',
     applicationName: 'Cloudtail',
     openGraph: {
@@ -80,6 +83,7 @@ export default async function RootLayout({children}: Readonly<{ children: React.
                 pageMap={pageMap}
             >
                 {children}
+                <Analytics />
             </Layout>
         </body>
     </html>
